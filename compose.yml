@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: ./example-app
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    restart: always
+    volumes:
+      - ./example-app/storage:/var/www/html/storage
